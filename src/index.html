@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Convert Dates between Ethiopian and Gregorian Calendar">
+    <meta name="description" content="">
+    <title>Gregorian to Ethiopian Calendar</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <script class="u-script" type="text/javascript" src="../jquery-3.7.1.js" defer=""></script>
+  </head>
+  <body>
+    <header>
+      <nav class="nav collapsible">
+        <a href="/"
+          ><img class="icon logo" src="../images/logo.webp" alt=""
+        /></a>
+        <svg class="icon icon--white nav__toggler">
+          <use href="../images/sprite.svg#menu"></use>
+        </svg>
+        <ul class="list nav__list collapsible__content">
+          <li class="nav__item">
+            <a target="_blank" href="https://github.com/eyob2one">Github</a>
+          </li>
+          <li class="nav__item">
+            <a target="_blank" href="https://mobotherapy2.blogspot.com">Blog</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="block block--dark block--skewed-left hero">
+      <div class="container grid grid--1x2">
+        <header class="block__header hero__content">
+          <h1 data-aos="zoom-in-up" class="block__heading">
+            Ethiopian to Greigorian Date Converter
+          </h1>
+          <div class="card-block">
+            <p onclick="$('#ethTodayTextArea').html(toEthiopianDateTimeString(new Date()))" class="lead text-center" style="margin-top: 1rem">Currently down...<strong id="ethTodayTextArea">...</strong>
+            </p>
+        </div>
+          <a
+            target="_blank"
+            href="https://github.com/eyob2one/Date-Converter-GC-to-EC"
+            class="btn btn--accent btn--stretched"
+            >See on GitHub</a
+          >
+        </header>
+        <!-- <picture data-aos="zoom-in">
+          <source
+            type="image/webp"
+            srcset="../images/banner.webp 1x, ../images/banner@2x.webp 2x"
+          />
+          <source
+            type="image/png"
+            srcset="../images/banner.png 1x, ../images/banner@2x.png 2x"
+          />
+          <img class="hero__image" src="../images/banner.png" alt="" />
+        </picture> -->
+      </div>
+    </section>
+    
+    <section class="block container block-plans">
+    <div class="grid grid--1x2">
+      <div class="plan">
+        <div class="card card--secondary">
+          <header class="card__header">
+            <h3 class="plan__name">Greigorian Date</h3>
+          </header>
+          <div class="card__body">
+            <div class="form-group">
+                <input type="date" class="form-control" id="EuropeanDate" onchange="updateCalculatedEthDateOnPage()" />
+                <p class="date-text" id="EurDayTextArea"></p>
+                <span class="help-block">Change the date above to convert to Ethiopian Date</span>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="plan">
+        <div class="card card--primary">
+          <header class="card__header">
+            <h3 class="plan__name">Ethiopian Date</h3>
+          </header>
+          <div class="card__body">
+            <div class="form-inline">
+                <div>
+                    <input type="number" class="form-control" id="EthMonthScroll" min="1" max="13" style="width:3em;padding-left:0;padding-right:0;" onchange="updateCalculatedEurDateOnPage()"> /
+                    <input type="number" class="form-control" id="EthDayScroll" min="1" max="30" style="width:3em;padding-left:0;padding-right:0;" onchange="updateCalculatedEurDateOnPage()"> /
+                    <input type="number" class="form-control" id="EthYearScroll" min="-99999" max="999999" style="width:4em;padding-left:0;padding-right:0;" onchange="updateCalculatedEurDateOnPage()">
+                </div>
+                <p class="date-text" id="ethDayTextArea" style="width:100%;"></p>
+                <span class="help-block" style="width:100%;">Change the date above to convert to European Date</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="block block--dark">
+      <header class="block__header">
+        <h2>Ethiopian Calendar</h2>
+      </header>
+      <div class="container">
+        <p>The Ethiopian calendar has twelve months of thirty days plus five or six epagomenal days, which comprise a thirteenth month. The Ethiopian months begin on the same days as those of the Coptic calendar, but their names are in Ge'ez. A sixth epagomenal day is added every four years, without exception, on 29 August of the Julian calendar, six months before the corresponding Julian leap day. Thus the first day of the Ethiopian calendar year, 1 Mäskäräm, for years between 1900 and 2099 (inclusive), is usually 11 September (Gregorian). It falls on 12 September in years before the Gregorian leap year</p>
+      </div>
+    </section>
+    <script  src="../js/dateconverter.js" defer></script>
+    <script  src="../js/main.js" defer></script>
+    
+</body>
+</html>
